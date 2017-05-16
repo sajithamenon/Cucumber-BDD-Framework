@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" verbose="0" name="Failed suite [Surefire suite]">
+  <test name="Surefire test(failed)">
+    <classes>
+      <class name="com.threeothree.test.runner.TestRunnerTest">
+        <methods>
+          <include name="runTests" invocation-numbers="1"/>
+          <include name="setUpClass"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- com.threeothree.test.runner.TestRunnerTest -->
+      <class name="testCases.LoginTest">
+        <methods>
+          <include name="Open"/>
+        </methods>
+      </class> <!-- testCases.LoginTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

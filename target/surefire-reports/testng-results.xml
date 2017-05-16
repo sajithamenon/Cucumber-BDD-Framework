@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="2" ignored="0" total="3" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="269697" started-at="2017-05-12T18:27:30Z" finished-at="2017-05-12T18:32:00Z">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="269697" started-at="2017-05-12T18:27:30Z" finished-at="2017-05-12T18:32:00Z">
+      <class name="testCases.LoginTest">
+        <test-method status="FAIL" signature="Open()[pri:0, instance:testCases.LoginTest@6ea12c19]" name="Open" duration-ms="151" started-at="2017-05-12T12:27:30Z" finished-at="2017-05-12T12:27:30Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.sendKeys(Unknown Source)
+	at com.threeothree.test.features.pages.LoginPage.login(LoginPage.java:40)
+	at testCases.LoginTest.Open(LoginTest.java:20)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:132)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:147)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Open -->
+      </class> <!-- testCases.LoginTest -->
+      <class name="com.threeothree.test.runner.TestRunnerTest">
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.threeothree.test.runner.TestRunnerTest@5afa04c]" name="setUpClass" is-config="true" duration-ms="838" started-at="2017-05-12T12:27:31Z" finished-at="2017-05-12T12:27:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="runTests(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.threeothree.test.runner.TestRunnerTest@5afa04c]" name="runTests" duration-ms="119803" started-at="2017-05-12T12:27:32Z" data-provider="features" finished-at="2017-05-12T12:29:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Login Feature]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runTests -->
+        <test-method status="FAIL" signature="runTests(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:com.threeothree.test.runner.TestRunnerTest@5afa04c]" name="runTests" duration-ms="148356" started-at="2017-05-12T12:29:31Z" data-provider="features" finished-at="2017-05-12T12:32:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[An user must be able to register as a Nabca User]]>
+              </value>
+            </param>
+          </params>
+          <exception class="cucumber.runtime.CucumberException">
+            <message>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 51
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'Sajitha-PC', ip: '169.254.58.61', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[cucumber.runtime.CucumberException: org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 51
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'Sajitha-PC', ip: '169.254.58.61', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: driver.version: unknown
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at com.threeothree.test.runner.TestRunnerTest.runTests(TestRunnerTest.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:132)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:193)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:94)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:147)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:290)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:242)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:121)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate option with index: 51
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'Sajitha-PC', ip: '169.254.58.61', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_91'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByIndex(Select.java:182)
+	at com.threeothree.test.features.pages.RequestAccessPage.supp_state(RequestAccessPage.java:130)
+	at com.threeothree.test.steps.RequstAccessPageSteps.selectTheState(RequstAccessPageSteps.java:53)
+	at ✽.And Select the state(RequestAccessPage.feature:29)
+]]>
+            </full-stacktrace>
+          </exception> <!-- cucumber.runtime.CucumberException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runTests -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.threeothree.test.runner.TestRunnerTest@5afa04c]" name="afterClass" is-config="true" duration-ms="224" started-at="2017-05-12T12:32:00Z" finished-at="2017-05-12T12:32:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.threeothree.test.runner.TestRunnerTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

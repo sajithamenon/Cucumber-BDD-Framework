@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>TestAutomationFrameworkJava</td>
+              <td>1</td>
+            <td>12 May 2017, 12:32</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">LoginSteps.iLoginWithCorrectCredentials()</td>
+              <td>1</td>
+              <td class="duration" data-value="4520803572">4s 520ms</td>
+              <td class="duration" data-value="4520803572">4s 520ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginSteps.iLoginWithCorrectUsernameAndIncorrectPassword()</td>
+              <td>1</td>
+              <td class="duration" data-value="3522517910">3s 522ms</td>
+              <td class="duration" data-value="3522517910">3s 522ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginSteps.iLoginWithEmptyCredentials()</td>
+              <td>1</td>
+              <td class="duration" data-value="3459488841">3s 459ms</td>
+              <td class="duration" data-value="3459488841">3s 459ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginSteps.iLoginWithEmptyPasswordAndCorrectUserName()</td>
+              <td>1</td>
+              <td class="duration" data-value="4305909315">4s 305ms</td>
+              <td class="duration" data-value="4305909315">4s 305ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginSteps.iLoginWithEmptyUserNameAndCorrectPassword()</td>
+              <td>1</td>
+              <td class="duration" data-value="3827801175">3s 827ms</td>
+              <td class="duration" data-value="3827801175">3s 827ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginSteps.iLoginWithIncorrectEmailAndCorrectPassword()</td>
+              <td>1</td>
+              <td class="duration" data-value="3462606071">3s 462ms</td>
+              <td class="duration" data-value="3462606071">3s 462ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginSteps.iShouldGoToTheAdminDashboard()</td>
+              <td>1</td>
+              <td class="duration" data-value="78469166">078ms</td>
+              <td class="duration" data-value="78469166">078ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">LoginSteps.iShouldNotGoToTheAdminDashboard()</td>
+              <td>5</td>
+              <td class="duration" data-value="403673569">403ms</td>
+              <td class="duration" data-value="80734713">080ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RequstAccessPageSteps.checkTheRadioButtonNamedIAmABroker()</td>
+              <td>1</td>
+              <td class="duration" data-value="1835058001">1s 835ms</td>
+              <td class="duration" data-value="1835058001">1s 835ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RequstAccessPageSteps.checkTheRadioButtonNamedIAmASupplier()</td>
+              <td>1</td>
+              <td class="duration" data-value="1802870441">1s 802ms</td>
+              <td class="duration" data-value="1802870441">1s 802ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RequstAccessPageSteps.checkTheStatesIdahoAndMontana()</td>
+              <td>2</td>
+              <td class="duration" data-value="1659391814">1s 659ms</td>
+              <td class="duration" data-value="829695907">829ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RequstAccessPageSteps.clickRequestAccessTab()</td>
+              <td>2</td>
+              <td class="duration" data-value="6615184940">6s 615ms</td>
+              <td class="duration" data-value="3307592470">3s 307ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RequstAccessPageSteps.enetrTheCompanyZip()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RequstAccessPageSteps.enterASupplierAddress()</td>
+              <td>2</td>
+              <td class="duration" data-value="492871266">492ms</td>
+              <td class="duration" data-value="246435633">246ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RequstAccessPageSteps.enterTheCity()</td>
+              <td>2</td>
+              <td class="duration" data-value="343818968">343ms</td>
+              <td class="duration" data-value="171909484">171ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RequstAccessPageSteps.enterTheCompanyAddress()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RequstAccessPageSteps.enterTheCompanyCity()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RequstAccessPageSteps.enterTheCompanyName()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RequstAccessPageSteps.enterTheDetailsOfFirstNameLastNameEmailAndPhoneNumber()</td>
+              <td>2</td>
+              <td class="duration" data-value="2157395832">2s 157ms</td>
+              <td class="duration" data-value="1078697916">1s 078ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RequstAccessPageSteps.enterTheZipcodeAs()</td>
+              <td>2</td>
+              <td class="duration" data-value="207759798">207ms</td>
+              <td class="duration" data-value="103879899">103ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RequstAccessPageSteps.register()</td>
+              <td>2</td>
+              <td class="duration" data-value="291998821">291ms</td>
+              <td class="duration" data-value="145999410">145ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RequstAccessPageSteps.selectASuppplierName()</td>
+              <td>2</td>
+              <td class="duration" data-value="90658020897">1m 30s 658ms</td>
+              <td class="duration" data-value="45329010448">45s 329ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RequstAccessPageSteps.selectTheCompanyState()</td>
+              <td>1</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="duration" data-value="0">000ms</td>
+              <td class="failed">0.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RequstAccessPageSteps.selectTheCountryAsUnitedStaes()</td>
+              <td>2</td>
+              <td class="duration" data-value="371292986">371ms</td>
+              <td class="duration" data-value="185646493">185ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RequstAccessPageSteps.selectTheState()</td>
+              <td>2</td>
+              <td class="duration" data-value="1761057640">1s 761ms</td>
+              <td class="duration" data-value="880528820">880ms</td>
+              <td class="failed">50.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">RequstAccessPageSteps.theUserIsOnTheLoginPage()</td>
+              <td>2</td>
+              <td class="duration" data-value="1598681">001ms</td>
+              <td class="duration" data-value="799340">000ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Testinitialise.openBrowser()</td>
+              <td>8</td>
+              <td class="duration" data-value="135826846306">2m 15s 826ms</td>
+              <td class="duration" data-value="16978355788">16s 978ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>27</td>
+            <td>49</td>
+            <td class="duration">4m 27s 606ms</td>
+            <td class="duration">5s 461ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
